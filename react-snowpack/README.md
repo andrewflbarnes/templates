@@ -4,6 +4,10 @@
 
 ## Build
 
+Build tools
+- node 14
+- pnpm 6.3.0
+
 ```bash
 nvm use
 pnpm install
@@ -11,22 +15,22 @@ pnpm install
 
 ## Scripts
 
-### npm start
+### pnpm start
 
 Runs the app in the development mode.
 Open http://localhost:8080 to view it in the browser.
 
-### npm run build
+### pnpm run build
 
 Builds a static copy of your site to the `build/` folder.
 
 **For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.json` config file.
 
-### npm run cy:open
+### pnpm run cy:open
 
 Opens the cypress dashboard for running integration tests.
 
-### npm run cy:run
+### pnpm run cy:run
 
 Runs cypress tests from the command.
 
