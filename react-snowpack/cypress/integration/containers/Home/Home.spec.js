@@ -41,4 +41,23 @@ describe('Home', () => {
     cy.get('.home-count')
       .should('have.text', 0)
   })
+
+  it('Interval increments by 1 every second', () => {
+    cy.clock()
+
+    cy.get('input[value="enable interval"')
+      .click()
+
+    cy.tick(1000)
+
+    cy.get('.home-count')
+      .should('have.text', 1)
+
+    cy.tick(1000)
+
+    cy.get('.home-count')
+      .should('have.text', 2)
+
+    cy.clock().then(clock => clock.restore())
+  })
 })
