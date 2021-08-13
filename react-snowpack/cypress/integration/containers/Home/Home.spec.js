@@ -5,6 +5,7 @@ const INITIAL_COUNT = 0;
 describe('Home', () => {
   beforeEach(() => {
     cy.visit('/')
+    expect(cy.get('input[value="enable interval"]')).not.to.be.null
   })
 
   it(`Count starts on ${INITIAL_COUNT}`, () => {
