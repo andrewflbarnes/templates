@@ -1,11 +1,12 @@
-import { default as rootReducer, RootState } from './reducer';
+import { default as rootReducer, ApplicationState, useSelector } from './reducer';
 import { default as store } from './store';
 
 export {
     rootReducer,
     store,
+    useSelector,
 }
 
 export type {
-    RootState
+    ApplicationState
 }

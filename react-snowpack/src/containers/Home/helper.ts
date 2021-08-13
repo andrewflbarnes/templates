@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@store';
+import { useDispatch } from 'react-redux';
+import { useSelector } from '@store';
 import { decrementCount, incrementCount, resetCount, toggleIntervalEnabled } from './reducer';
 
 interface CountHelper {
@@ -14,7 +14,7 @@ interface CountHelper {
 
 export const useCountHelper: () => CountHelper = () => {
     const dispatch = useDispatch();
-    const {count, intervalEnabled} = useSelector((s: RootState) => s.home);
+    const {count, intervalEnabled} = useSelector(s => s.home);
 
     const clearCountInterval = useEffect(() => {
         if (intervalEnabled) {
