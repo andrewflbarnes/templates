@@ -1,11 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface Counter {
+type HomeState = {
     count: number
     intervalEnabled: boolean
 }
-
-type HomeState = Counter;
 
 const initialState: HomeState = {
     count: 0,
