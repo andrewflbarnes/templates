@@ -20,4 +20,13 @@ describe('App', () => {
     cy.url()
       .should('equal', `${Cypress.config().baseUrl}/message`)
   })
+
+  it('Has External link', () => {
+    cy.get('a[href="/external"]')
+      .should('have.text', 'External')
+      .click()
+
+    cy.url()
+      .should('equal', `${Cypress.config().baseUrl}/external`)
+  })
 })
