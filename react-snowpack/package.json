@@ -7,8 +7,8 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "sb:run": "start-storybook -p 6006",
+    "sb:build": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
